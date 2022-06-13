@@ -1,6 +1,6 @@
 {
     "name": "ab-alselwi/laravel-arabic-html",
-    "description": "Convert laravel view to arabic html (pdf) by using ArPHP and dompdf with arabic fonts and letters.",
+    "description": "Convert laravel view to arabic html (pdf) by using ArPHP and dompdf with arabic fonts and text.",
     "license": "MIT",
     "keywords": [
         "Arabic", "arabic-glyphs", "arabic-calendar","arabic-html","arabic-dompdf"
