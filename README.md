@@ -1,4 +1,4 @@
-#  convert laravel view to arabic html using ArPHP , to support dompdf with arabic lettrs
+#  Convert laravel view to arabic html using ArPHP , to support dompdf with arabic letters
 
 To handle  Arabic text issue in a more clean way with no need to hack dompdf script at all. 
 
