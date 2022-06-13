@@ -6,7 +6,8 @@ This package makes it easy to convert view blade to  pdf  using [laravel-dompdf]
 
 قمنا بكتابة هذا الباكج  لدعم اللغة العربية  في مكتبة  [laravel-dompdf](https://github.com/barryvdh/laravel-dompdf) من خلال   استخدام  [Ar-PHP](https://github.com/khaled-alshamaa/ar-php)
 
-يوفر هذا الباكج حالياً  دالة واحدة فقط وهي   ->toArabicHTML() بالاضافة إلى انه يمكنك استخدام  المكتبات  الأصلية في تحويل أي محتوى إلى ملف  pdf .
+يوفر هذا الباكج حالياً  دالة واحدة فقط وهي   toArabicHTML() بالاضافة إلى انه يمكنك استخدام  المكتبات  الأصلية في تحويل أي محتوى إلى ملف  pdf .
+
 ## Contents
 
 - [Installation](#installation)
@@ -15,7 +16,6 @@ This package makes it easy to convert view blade to  pdf  using [laravel-dompdf]
 
 ## Requirements
 
- * PHP version 7.1 or higher
  * DOM extension
  * MBString extension
  * php-font-lib
@@ -41,13 +41,22 @@ composer require ab-alselwi/laravel-arabic-html
 
 ### Configuration
 
-فقط هنا تحتاج  للقيام  باعداد  المكتباات المرتبطة  
+فقط هنا تحتاج  للقيام  باعداد  المكتباات المرتبطة  .
+
 The defaults configuration settings are set in `config/dompdf.php`. Copy this file to your own config directory to modify the values. You can publish the config using this command:
+
 ```shell
     php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider"
 ```
+
+ينصح  بتحديد مجلد الخطوط  في المسار   storage\fonts  .
+
 You need to setup font_dir in config\dompdf by copy fonts folder to storage\fonts or any folder with read and write permissions. 
 You should be carful when write css , and font . you can't use font-weight:number like font-weight:600 ; just use font-weight:bold.
+
+بعض  التنسيقات قد لا يتم دعمها في  dompdf مثل  font-weight مع القيم الرقمية  بالاضافة للعديد من التنسيقات  التي  تعتمد على flex box , ولعرض رسالة خطأ في حال وجود أي  تنسيقات  غير مدعومة يمكنك  تغيير  اعدادات عرض الخطاء  كما يلي : 
+
+'show_warnings' => true ,   // Throw an Exception on warnings from dompdf
 
 for more detials about dompdf settings : 
 - https://github.com/barryvdh/laravel-dompdf 
