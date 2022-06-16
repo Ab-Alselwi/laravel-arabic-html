@@ -17,7 +17,7 @@ class ServiceProvider extends IlluminateServiceProvider
     public function boot()
     {
         View::macro('toArabicHTML', function ($line_length=100, $hindo=false, $forcertl=false) {
-            return ServiceProvider::convertToArabic($this->toHtml(), $length, $hindo, $forcertl);
+            return ServiceProvider::convertToArabic($this->toHtml(), $line_length, $hindo, $forcertl);
         });
     }
 
