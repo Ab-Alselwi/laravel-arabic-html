@@ -4,7 +4,9 @@ To handle  Arabic text issue in a more clean way with no need to hack dompdf scr
 
 This package makes it easy to convert view blade to  pdf  using [laravel-dompdf](https://github.com/barryvdh/laravel-dompdf) and [Ar-PHP](https://github.com/khaled-alshamaa/ar-php). 
 
+ 
 قمنا بكتابة هذا الباكج  لدعم اللغة العربية  في مكتبة  [laravel-dompdf](https://github.com/barryvdh/laravel-dompdf) من خلال   استخدام  [Ar-PHP](https://github.com/khaled-alshamaa/ar-php)
+ سيقوم الباكج بتنزيل المكتبات المطلوبة في حال  كانت غير موجودة دون الحاجة لتنزيلها كلاً على حده. 
 
 يوفر هذا الباكج حالياً  دالة واحدة فقط وهي   toArabicHTML() بالاضافة إلى انه يمكنك استخدام  المكتبات  الأصلية في تحويل أي محتوى إلى ملف  pdf .
 
@@ -65,6 +67,19 @@ for more detials about dompdf settings :
 ## Usage
 
 To handle  Arabic text issue in a more clean way with no need to hack dompdf script at all.We use View macro, so use view('your_blade_view_name')->toArabicHTML() to support any content in Arabic .  https://github.com/dompdf/dompdf/issues/712#issuecomment-650592099
+
+function parameters : 
+    - $line_length :int ,optional, default 100. max length in line. 
+    - $hindo :bool, optional, default false. convert numbers in text to hindo.
+    - $forcertl :bool, optional, default false. force right to left document direction. 
+
+تسختدم الدالة دالة utf8Glyphs الموجودة في مكتبة Ar-PHP لذا يمكنك أن تقوم بتخصيص بارامترات هذه الدالة حيث :
+1 - $line_length : اختياري 
+    رقم -  في حال وجود نصوص طويلة قد يتطلب منك تحديد كم حرفاً في السطر الواحد قمنا بتعديل القيمة الافتراضية من 50 الى 100 حرف .
+2- $hindo : اختياري
+     قيمة منطقية bool  في حال رغبت في تحويل الأرقام الموجودة في المستند إلى أرقام هندية قمنا بتعديل القيمة الافتراضية إلى  false حيث ستبقى الأرقام على حالها بألارقام العربية والتي تكتب في اللغة الانجليزية حالياُ
+3- $forcertl : اختياري
+     قيمة منطقية bool تتوافق القيمة الافتراضية مع الدالة الأصلية false حيث تشير إلى فرض تحويل اتجاه المستند من اليمين  إلى اليسار
 
 Example:
 
