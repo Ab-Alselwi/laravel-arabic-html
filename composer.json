@@ -3,7 +3,11 @@
     "description": "Convert laravel view to arabic html (pdf) by using ArPHP and dompdf with arabic fonts and text.",
     "license": "MIT",
     "keywords": [
-        "Arabic", "arabic-glyphs", "arabic-calendar","arabic-html","arabic-dompdf"
+        "Arabic",
+        "arabic-glyphs",
+        "arabic-calendar",
+        "arabic-html",
+        "arabic-dompdf"
     ],
     "authors": [
         {
@@ -12,10 +16,10 @@
         }
     ],
     "require": {
-        "php": ">=7.3",
-        "barryvdh/laravel-dompdf": "^1.0",
-        "illuminate/support": "^6|^7|^8|^9",
-        "illuminate/view": "^6|^7|^8|^9",
+        "php": "^7.3||^8.0",
+        "barryvdh/laravel-dompdf": "^1.0||^2.0",
+        "illuminate/support": "^6|^7|^8|^9|^10",
+        "illuminate/view": "^6|^7|^8|^9|^10",
         "khaled.alshamaa/ar-php": "^6.2"
     },
     "autoload": {
@@ -34,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                 "Ab\\ArabicHTML\\ServiceProvider"
+                "Ab\\ArabicHTML\\ServiceProvider"
             ]
         }
     },
