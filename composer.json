@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.3||^8.0",
-        "barryvdh/laravel-dompdf": "^1.0||^2.0",
+        "barryvdh/laravel-dompdf": "^1.0||^2.0||^3.0",
         "illuminate/support": "^6|^7|^8|^9|^10|^11",
         "illuminate/view": "^6|^7|^8|^9|^10|^11",
         "khaled.alshamaa/ar-php": "^6.3"
